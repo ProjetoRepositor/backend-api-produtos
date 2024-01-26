@@ -649,24 +649,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\letic\\.nuget\\packages\\": {}
+    "C:\\Users\\CERZ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
+      "projectUniqueName": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
       "projectName": "App",
-      "projectPath": "D:\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
-      "packagesPath": "C:\\Users\\letic\\.nuget\\packages\\",
-      "outputPath": "D:\\RiderProjects\\backend-api-produtos\\App\\src\\App\\obj\\",
+      "projectPath": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
+      "packagesPath": "C:\\Users\\CERZ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\letic\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\CERZ\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Users\\CERZ\\.dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -723,7 +724,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\CERZ\\.dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   }
