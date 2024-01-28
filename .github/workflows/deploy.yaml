@@ -6,6 +6,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      
       - name: deploy
         run: |
           dotnet tool install -g Amazon.Lambda.Tools
