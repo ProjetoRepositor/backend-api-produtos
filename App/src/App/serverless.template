@@ -16,7 +16,8 @@
         "Role": "arn:aws:iam::335175149999:role/LambdaDynamo",
         "Policies": [
           "AWSLambda_FullAccess",
-          "AmazonDynamoDBFullAccess"
+          "AmazonDynamoDBFullAccess",
+          "AWSLambdaBasicExecutionRole"
         ],
         "Events": {
           "ProxyResource": {
