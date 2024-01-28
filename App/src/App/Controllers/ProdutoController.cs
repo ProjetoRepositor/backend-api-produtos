@@ -5,6 +5,7 @@ using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.DynamoDBv2.Model;
 using App.Models;
+using App.Util;
 using Microsoft.AspNetCore.Mvc;
 
 namespace App.Controllers;
@@ -60,6 +61,35 @@ public class ProdutoController : ControllerBase
     private async Task<Produto?> BuscarProduto(string ean)
     {
         var produto = await context.LoadAsync<Produto>(ean);
+
+        if (produto is null)
+        {
+            string request;
+
+            var httpUtil = new Cosmos();
+
+            try
+            {
+                request = httpUtil.DownloadString($"https://api.cosmos.bluesoft.com.br/gtins/{ean}.json");
+            }
+            catch (WebException)
+            {
+                return null;
+            }
+
+            var response = JsonSerializer.Deserialize<RootObject>(request)!;
+
+            var novoProduto = new Produto
+            {
+                Ean = ean,
+                Nome = response.description,
+                CosmosImageUrl = response.thumbnail,
+            };
+
+            await context.SaveAsync(novoProduto);
+
+            return novoProduto;
+        }
 
         return produto;
     }

@@ -8,4 +8,5 @@ public class Produto
     [DynamoDBHashKey]
     public string Ean { get; set; }
     public string Nome { get; set; }
+    public string CosmosImageUrl { get; set; }
 }
