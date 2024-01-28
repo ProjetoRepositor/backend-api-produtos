@@ -15,7 +15,8 @@
         "Timeout": 30,
         "Role": "arn:aws:iam::335175149999:role/LambdaDynamo",
         "Policies": [
-          "AWSLambda_FullAccess"
+          "AWSLambda_FullAccess",
+          "AmazonDynamoDBFullAccess"
         ],
         "Events": {
           "ProxyResource": {

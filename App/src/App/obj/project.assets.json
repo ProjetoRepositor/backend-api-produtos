@@ -296,6 +296,302 @@
           }
         }
       }
+    },
+    "net6.0/linux-x64": {
+      "Amazon.Lambda.APIGatewayEvents/2.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Amazon.Lambda.APIGatewayEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Amazon.Lambda.APIGatewayEvents.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Amazon.Lambda.ApplicationLoadBalancerEvents/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Amazon.Lambda.ApplicationLoadBalancerEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Amazon.Lambda.ApplicationLoadBalancerEvents.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Amazon.Lambda.AspNetCoreServer/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Amazon.Lambda.APIGatewayEvents": "2.6.0",
+          "Amazon.Lambda.ApplicationLoadBalancerEvents": "2.1.0",
+          "Amazon.Lambda.Core": "2.1.0",
+          "Amazon.Lambda.Logging.AspNetCore": "3.1.0",
+          "Amazon.Lambda.Serialization.SystemTextJson": "2.3.1"
+        },
+        "compile": {
+          "lib/net6.0/Amazon.Lambda.AspNetCoreServer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Amazon.Lambda.AspNetCoreServer.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Amazon.Lambda.Core/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Amazon.Lambda.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Amazon.Lambda.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Amazon.Lambda.Logging.AspNetCore/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Amazon.Lambda.Core": "1.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Logging": "2.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Amazon.Lambda.Logging.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amazon.Lambda.Logging.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Amazon.Lambda.Serialization.SystemTextJson/2.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Amazon.Lambda.Core": "2.1.0"
+        },
+        "compile": {
+          "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AWSSDK.Core/3.7.300.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.7.300.6": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.300.6, 4.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AWSSDK.Extensions.NETCore.Setup/3.7.300": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "3.7.300",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Binder": "2.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Options": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0",
+          "Microsoft.Extensions.Primitives": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -649,25 +945,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CERZ\\.nuget\\packages\\": {}
+    "/Users/caio/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
+      "projectUniqueName": "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/App.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
-      "packagesPath": "C:\\Users\\CERZ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\obj\\",
+      "projectPath": "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/App.csproj",
+      "packagesPath": "/Users/caio/.nuget/packages/",
+      "outputPath": "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\CERZ\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/caio/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Users\\CERZ\\.dotnet\\library-packs": {},
+        "/Users/caio/.dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -712,8 +1008,28 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Crossgen2.osx-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+            "version": "[6.0.25, 6.0.25]"
           }
         ],
         "frameworkReferences": {
@@ -724,7 +1040,12 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\CERZ\\.dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/caio/.dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "linux-x64": {
+        "#import": []
       }
     }
   }
