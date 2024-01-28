@@ -15,6 +15,12 @@ public class ProdutoController : ControllerBase
 {
     private static AmazonDynamoDBClient client = new();
     private static DynamoDBContext context = new(client);
+    private ILogger logger;
+
+    public ProdutoController(ILogger logger)
+    {
+        this.logger = logger;
+    }
     
     [HttpGet]
     public async Task<IActionResult> Buscar([FromQuery] string? nome, [FromQuery] string? ean)
@@ -60,10 +66,14 @@ public class ProdutoController : ControllerBase
 
     private async Task<Produto?> BuscarProduto(string ean)
     {
+        logger.LogDebug($"Buscando produto {ean}");
+        
         var produto = await context.LoadAsync<Produto>(ean);
 
         if (produto is null)
         {
+            logger.LogDebug($"Produto {ean} não encontrado na base, procurando na bluecosmos");
+            
             string request;
 
             var httpUtil = new Cosmos();
@@ -74,6 +84,7 @@ public class ProdutoController : ControllerBase
             }
             catch (WebException)
             {
+                logger.LogDebug($"Produto {ean} não encontrado na bluecosmos");
                 return null;
             }
 
@@ -88,9 +99,13 @@ public class ProdutoController : ControllerBase
 
             await context.SaveAsync(novoProduto);
 
+            logger.LogDebug($"Produto {ean} encontrado na bluecosmos");
+            
             return novoProduto;
         }
 
+        logger.LogDebug($"Produto {ean} encontrado");
+        
         return produto;
     }
 }
