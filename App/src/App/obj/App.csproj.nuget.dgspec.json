@@ -1,26 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/App.csproj": {}
+    "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj": {}
   },
   "projects": {
-    "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/App.csproj": {
+    "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/App.csproj",
+        "projectUniqueName": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
         "projectName": "App",
-        "projectPath": "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/App.csproj",
-        "packagesPath": "/Users/caio/.nuget/packages/",
-        "outputPath": "/Users/caio/RiderProjects/backend-api-produtos/App/src/App/obj/",
+        "projectPath": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\App.csproj",
+        "packagesPath": "C:\\Users\\CERZ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CERZ\\RiderProjects\\backend-api-produtos\\App\\src\\App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/caio/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\CERZ\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/Users/caio/.dotnet/library-packs": {},
+          "C:\\Users\\CERZ\\.dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,28 +65,8 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Crossgen2.osx-x64",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[6.0.22, 6.0.22]"
             }
           ],
           "frameworkReferences": {
@@ -97,12 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/caio/.dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Users\\CERZ\\.dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     }

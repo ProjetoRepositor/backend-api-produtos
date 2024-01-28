@@ -1,0 +1,13 @@
+﻿on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu
+    steps:
+      - name: deploy
+        run: |
+          dotnet tool install -g Amazon.Lambda.Tools
+          cd "App/src/App"
+          dotnet lambda deploy-serverless
