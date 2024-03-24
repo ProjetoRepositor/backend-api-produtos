@@ -61,6 +61,8 @@ public class ProdutoController : ControllerBase
     private async Task<Produto?> BuscarProduto(string ean)
     {
         Console.WriteLine($"Buscando produto {ean}");
+
+        if (!ValidarEAN(ean)) return null;
         
         var produto = await context.LoadAsync<Produto>(ean);
 
@@ -101,5 +103,33 @@ public class ProdutoController : ControllerBase
         Console.WriteLine($"Produto {ean} encontrado");
         
         return produto;
+    }
+    
+    private bool ValidarEAN(string ean)
+    {
+        // Verifica se a string contém apenas dígitos
+        foreach (char c in ean)
+        {
+            if (!char.IsDigit(c))
+                return false;
+        }
+
+        // Verifica se o código tem 13 dígitos
+        if (ean.Length != 13)
+            return false;
+
+        int soma = 0;
+        for (int i = 0; i < 12; i++)
+        {
+            int digito = ean[i] - '0';
+            if (i % 2 == 0)
+                soma += digito;
+            else
+                soma += digito * 3;
+        }
+
+        int resto = soma % 10;
+        int digitoVerificador = (resto == 0) ? 0 : 10 - resto;
+        return digitoVerificador == (ean[12] - '0');
     }
 }
