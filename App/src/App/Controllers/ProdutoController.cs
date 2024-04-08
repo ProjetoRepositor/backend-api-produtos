@@ -80,6 +80,7 @@ public class ProdutoController : ControllerBase
             }
             catch (WebException e)
             {
+                Console.WriteLine(e.Message);
                 Console.WriteLine($"Produto {ean} não encontrado na bluecosmos");
                 return null;
             }
