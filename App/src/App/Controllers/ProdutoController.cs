@@ -78,14 +78,16 @@ public class ProdutoController : ControllerBase
             {
                 request = httpUtil.DownloadString($"https://api.cosmos.bluesoft.com.br/gtins/{ean}.json");
             }
-            catch (WebException)
+            catch (WebException e)
             {
                 Console.WriteLine($"Produto {ean} não encontrado na bluecosmos");
                 return null;
             }
-
+            
+            Console.WriteLine(request);
+            
             var response = JsonSerializer.Deserialize<RootObject>(request)!;
-
+            
             var novoProduto = new Produto
             {
                 Ean = ean,
