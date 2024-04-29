@@ -89,6 +89,8 @@ public class ProdutoController : ControllerBase
                     CosmosImageUrl = "",
                     Nome = ean,
                 };
+
+                await context.SaveAsync(produtoProvisorio);
                 
                 return produtoProvisorio;
             }
