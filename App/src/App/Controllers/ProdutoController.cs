@@ -82,7 +82,15 @@ public class ProdutoController : ControllerBase
             {
                 Console.WriteLine(e.Message);
                 Console.WriteLine($"Produto {ean} não encontrado na bluecosmos");
-                return null;
+                
+                var produtoProvisorio = new Produto
+                {
+                    Ean = ean,
+                    CosmosImageUrl = "",
+                    Nome = ean,
+                };
+                
+                return produtoProvisorio;
             }
             
             Console.WriteLine(request);
