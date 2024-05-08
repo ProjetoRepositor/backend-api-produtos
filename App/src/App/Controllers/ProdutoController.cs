@@ -58,6 +58,14 @@ public class ProdutoController : ControllerBase
         return response != null ? Ok(response) : NotFound();
     }
 
+    [HttpPost]
+    public async Task<IActionResult> InserirProdutoManualmente([FromBody] Produto produto)
+    {
+        await context.SaveAsync(produto);
+
+        return Ok(produto);
+    }
+
     private async Task<Produto?> BuscarProduto(string ean)
     {
         Console.WriteLine($"Buscando produto {ean}");
